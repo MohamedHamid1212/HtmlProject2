@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystylecss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculateCalorie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            font-weight: bold;
+            font-size: 18px;
+            color: #BA0300;
+            margin-top: 15px;
+        }
+        h1 {
+            font-family: Papyrus;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <figure>
+        <img src="logo.png" width="70px" height="70px">
+        <figcaption style="font-family: fantasy; color: #BA0300;">Michelin Star</figcaption>
+    </figure>
+</header>
+
+<nav>
+    <ul>
+    <li><p style="font-family: fantasy;"><a href="Projecthtml.html">Home page</p></a></li>
+    <li><p style="font-family: fantasy;"><a href="AddToBasket.html">Basket</p></a></li>
+    <li><p style="font-family: fantasy;"><a href="AboutUs.html">About Us</p></a></li>
+    <li><p style="font-family: fantasy;"><a href="Locations.html">Make an order</a></p></li>
+    <li><p style="font-family: fantasy;"><a href="ContactUs.html">Contact Us</a></p></li>
+ 
+    <li><p style="font-family: fantasy;"><a href="SiteMap.html">Site Maps</a></p></li>
+    <li><p style="font-family: fantasy;"><a href="ourbranches.html">our branches</a></p></li>
+    <li><p style="font-family: fantasy;"><a href="ContactForm.html">ContactForm</a></p></li>  
+    <li><p style="font-family: fantasy;"><a href="CalculateCalorie.html">CalculateCalorie</a></p></li>   
+    
+  </ul>
+</nav>
+
+<div class="container mt-4">
+    <h1>Calorie calculator</h1>
+
+    <form id="calorieForm" onsubmit="calculateCalories(); return false;">
+        <label for="foodName" style="color: #BA0300;">Food Name:</label>
+        <input type="text" id="foodName" name="foodName" class="form-control" required>
+
+        <label for="quantity" style="color: #BA0300;">Quantity (grams):</label>
+        <input type="number" id="quantity" name="quantity" class="form-control" min="1" value="100" required>
+
+        <label for="caloriesPerServing" style="color: #BA0300;">Calories per 100g:</label>
+        <input type="number" id="caloriesPerServing" name="caloriesPerServing" class="form-control" step="0.01" min="0.01" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    function calculateCalories() {
+        var foodNameInput = document.getElementById("foodName");
+        var quantityInput = document.getElementById("quantity");
+        var caloriesPerServingInput = document.getElementById("caloriesPerServing");
+
+        var quantity = parseFloat(quantityInput.value);
+        var caloriesPerServing = parseFloat(caloriesPerServingInput.value);
+        var totalCalories = (quantity / 100) * caloriesPerServing;
+
+        var resultMessage = "Total Calories for " + quantity + " grams of " + foodNameInput.value + ": " + totalCalories.toFixed(2) + " calories";
+        document.getElementById("result").textContent = resultMessage;
+    }
+</script>
+
+
+</body>
+</html>

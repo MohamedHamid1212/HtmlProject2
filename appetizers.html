@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="mystylecss.css">
+  <title>Appetizers</title>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #343a40;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: white;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .groove {
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+    }
+
+    #Bold {
+      font-weight: bold;
+    }
+
+    .moved-image {
+      position: absolute;
+      top: 210px;
+      left: 50px;
+    }
+
+    .appetizer-container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .appetizer-card {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .appetizer-img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .appetizer-details {
+      padding: 20px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ba0300;
+    }
+
+    .add-to-basket {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .btn-add-to-basket {
+      color: #fff;
+      background-color: #ba0300;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-add-to-basket:hover {
+      background-color: #890200;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <figure>
+      <img src="logo.png" width="70px" height="70px">
+      <figcaption style="font-family: fantasy; color: #BA0300;">Michelin Star</figcaption>
+    </figure>
+  </header>
+
+  <nav>
+    <ul>
+    <li><p style="font-family: fantasy;"><a href="Projecthtml.html">Home page</p></a></li>
+    <li><p style="font-family: fantasy;"><a href="AddToBasket.html">Basket</p></a></li>
+    <li><p style="font-family: fantasy;"><a href="AboutUs.html">About Us</p></a></li>
+    <li><p style="font-family: fantasy;"><a href="Locations.html">Make an order</a></p></li>
+    <li><p style="font-family: fantasy;"><a href="ContactUs.html">Contact Us</a></p></li>
+ 
+    <li><p style="font-family: fantasy;"><a href="SiteMap.html">Site Maps</a></p></li>
+    <li><p style="font-family: fantasy;"><a href="ourbranches.html">our branches</a></p></li>
+    <li><p style="font-family: fantasy;"><a href="ContactForm.html">ContactForm</a></p></li>  
+    <li><p style="font-family: fantasy;"><a href="CalculateCalorie.html">CalculateCalorie</a></p></li>   
+    
+  </ul>
+</nav>
+
+  <div class="container mt-5 appetizer-container">
+    <h1 class="mb-4" style="font-family: Papyrus; color: white;">Appetizers</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="appetizer-card">
+          <img src="appetizer1.jpg" class="appetizer-img img-fluid" alt="Braised Cabbage">
+          <div class="appetizer-details">
+            <h3 style="color: #BA0300;">Braised Cabbage, Burnt Cream, Bordelaise Sauce</h3>
+            <p style="color: #dee2e6;">Pot-roast cabbage is the star of this fantastic dish, but the rich-umami-laden Bordelaise sauce underneath gives it extra oomph.</p>
+            <p class="price">$150</p>
+            <div class="add-to-basket">
+              <button class="btn btn-add-to-basket"> <p><a href="AddToBasket.html" style="text-decoration: none; color: red;">AddToBasket</a></p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="appetizer-card">
+          <img src="appetizer2.jpg" class="appetizer-img img-fluid" alt="Crab Cake Burgers">
+          <div class="appetizer-details">
+            <h3 style="color: #BA0300;">Crab Cake Burgers</h3>
+            <p style="color:#dee2e6 ;">Crab cakes with avocado habanero sauce</p>
+            <p class="price">$175</p>
+            <div class="add-to-basket">
+              <button class="btn btn-add-to-basket"> <p><a href="AddToBasket.html" style="text-decoration: none; color: red;">AddToBasket</a></p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="appetizer-card">
+          <img src="appetizer3.jpg" class="appetizer-img img-fluid" alt="Cucumber Mousse And Dill Shrimp Bites">
+          <div class="appetizer-details">
+            <h3 style="color: #BA0300;">Cucumber Mousse And Dill Shrimp Bites</h3>
+            <p style="color:#dee2e6;">The refreshing taste of soft heavenly cucumber mousse cucumber, on a crispy toast circle topped with a juicy shrimp.</p>
+            <p class="price">$220</p>
+            <div class="add-to-basket">
+              <button class="btn btn-add-to-basket"> <p><a href="AddToBasket.html" style="text-decoration: none; color: red;">AddToBasket</a></p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="appetizer-card">
+          <img src="appetizer4.jpg" class="appetizer-img img-fluid" alt="Kaffir Lime Cured Salmon">
+          <div class="appetizer-details">
+            <h3 style="color: #BA0300;">Kaffir Lime Cured Salmon</h3>
+            <p style="color: #dee2e6;">Gin, Kaffir Lime Cured Salmon, Cucumber & Avocado</p>
+            <p class="price">$300</p>
+            <div class="add-to-basket">
+              <button class="btn btn-add-to-basket"> <p><a href="AddToBasket.html" style="text-decoration: none; color: red;">AddToBasket</a></p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="groove" ><a id="Bold" href="Drinks.html">Drinks</a></p>
+        </div>
+        <div class="col-md-4">
+          <p class="groove"><a id="Bold" href="mainCourse.html">MainCourse</a></p>
+        </div>
+        <div class="col-md-4">
+          <p class="groove"><a id="Bold" href="desserts.html">Desserts</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
